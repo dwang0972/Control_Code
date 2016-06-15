@@ -128,7 +128,7 @@ int Server::server_receive() {
 // Main method for Server testing
 // Sets up initial config and begins outputting to the terminal
 // Rename to main if compiling only this file
-int main_server(int argc, char** argv) {
+int main(int argc, char** argv) {
     if (argc != 2) {
         printf("Usage: %s <port-number>\n", argv[0]);
         return -1;
