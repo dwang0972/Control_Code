@@ -2033,6 +2033,7 @@
 				<Item Name="Port4" Type="RIO Subresource"/>
 			</Item>
 		</Item>
+		<Item Name="podControl_9066.vi" Type="VI" URL="../podControl_9066.vi"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
