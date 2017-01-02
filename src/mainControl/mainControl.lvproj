@@ -2035,6 +2035,7 @@
 			</Item>
 		</Item>
 		<Item Name="podControl_9066.vi" Type="VI" URL="../podControl_9066.vi"/>
+		<Item Name="podGlobals_9066.vi" Type="VI" URL="../podGlobals_9066.vi"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
