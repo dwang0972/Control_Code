@@ -1,5 +1,6 @@
 // Control code for arduino talking with i2c sensors
 // Removes need for bit banging on cRIO
+//
 
 #include <Wire.h>
 
@@ -33,7 +34,7 @@ int16_t MPU6050_DATA_2[7];
 
 // BMP180 i2c addresses
 const int BMP180_ADDR_1 = 0x77;
-const int BMP180_ADDR_2 = 0x77;
+// const int BMP180_ADDR_2 = 0x77; // Only using one
 
 // BMP180 Registers
 typedef enum {
@@ -49,8 +50,8 @@ typedef enum {
 // BMP180 Data
 int8_t BMP180_DATA_T_1[2];
 int8_t BMP180_DATA_P_1[2];
-int8_t BMP180_DATA_T_2[3];
-int8_t BMP180_DATA_P_2[3];
+//int8_t BMP180_DATA_T_2[3];
+//int8_t BMP180_DATA_P_2[3];
 
 // Write val to reg
 void i2c_write(int addr, int reg, int val) {
@@ -93,10 +94,30 @@ void setup() {
 void loop() {
   i2c_read2(MPU6050_ADDR_1, MPU6050_REG::MPU6050_RA_ACCEL_XOUT_H, MPU6050_DATA_1, 7);
   i2c_read2(MPU6050_ADDR_2, MPU6050_REG::MPU6050_RA_ACCEL_XOUT_H, MPU6050_DATA_2, 7);
+  
   i2c_read(BMP180_ADDR_1, BMP180_REG::BMP180_COMMAND_TEMPERATURE, BMP180_DATA_T_1, 2);
-  i2c_read(BMP180_ADDR_2, BMP180_REG::BMP180_COMMAND_TEMPERATURE, BMP180_DATA_T_2, 2);
   i2c_read(BMP180_ADDR_1, BMP180_REG::BMP180_COMMAND_PRESSURE0, BMP180_DATA_P_1, 3);
-  i2c_read(BMP180_ADDR_2, BMP180_REG::BMP180_COMMAND_PRESSURE0, BMP180_DATA_P_2, 3);
+  
+  //i2c_read(BMP180_ADDR_2, BMP180_REG::BMP180_COMMAND_TEMPERATURE, BMP180_DATA_T_2, 2);
+  //i2c_read(BMP180_ADDR_2, BMP180_REG::BMP180_COMMAND_PRESSURE0, BMP180_DATA_P_2, 3);
+
+  for (int i = 0; i < 7; i++) {
+    Serial.print("MPU1: ");
+    Serial.println(MPU6050_DATA_1[i]);
+    Serial.print("MPU2: ");
+    Serial.println(MPU6050_DATA_2[i]);
+  }
+
+  for (int i = 0; i < 2; i++) {
+    Serial.print("BMPT: ");
+    Serial.println(BMP180_DATA_T_1[i]);
+  }
+
+  for (int i = 0; i < 3; i++) {
+    Serial.print("BMPP: ");
+    Serial.println(BMP180_DATA_P_1[i]);
+  }
+  
   delay(500);
 }
 
