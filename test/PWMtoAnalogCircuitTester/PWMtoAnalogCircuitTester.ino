@@ -10,7 +10,7 @@ void setup() {
 }
 
 void loop() {
-  long duration, distance, rd;
+  float duration, distance, rd;
   digitalWrite(trigPin, LOW); 
   delayMicroseconds(2);
  
@@ -19,16 +19,16 @@ void loop() {
   digitalWrite(trigPin, LOW);
   
   duration = pulseIn(echoPin, HIGH);
-  distance = (duration / 2) * 0.0344;
+  distance = (duration / 2) * 0.344;
   Serial.print("Distance = ");
   Serial.print(distance);
-  Serial.println(" cm");
+  Serial.println(" mm");
   analogWrite(analogOut, distance);
   delay(100);
   rd = analogRead(analogIn);
   Serial.print("Read = ");
   Serial.print(rd/4);
-  Serial.println(" cm");
+  Serial.println(" mm");
   Serial.println();
   delay(400);
 }

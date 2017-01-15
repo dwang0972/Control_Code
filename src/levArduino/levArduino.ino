@@ -2,22 +2,23 @@
 // Removes FPGA customization and timing problems from cRIO
 //
 
-int tp[] = {2, 4, 6};
-int ep[] = {3, 5, 7};
-int dist[] = {0, 0, 0, 0};
+int tp[] = {2, 5, 7};
+int ep[] = {4, 6, 8};
+float dist[] = {0, 0, 0, 0};
 int numSens = sizeof(tp)/sizeof(int);
 
-int ap[] = {10, 11, 12, 13};
+int ap[] = {3, 9, 10, 11};
 
-long findDist(int sens) {
-  long duration, distance;
+// Returns distance in mm
+float findDist(int sens) {
+  float duration, distance;
   digitalWrite(tp[sens], LOW);
   delayMicroseconds(2);
   digitalWrite(tp[sens], HIGH);
   delayMicroseconds(10);
   digitalWrite(tp[sens], LOW);
   duration = pulseIn(ep[sens], HIGH);
-  distance = (duration/2) / 29.1;
+  distance = (duration / 2) * 0.344;
   return distance;
 }
 
@@ -31,12 +32,9 @@ void setup() {
 
 void loop() {
   for (int i = 0; i < numSens; i++) {
-    dist[i] = findDist(i); // in cm
-    analogWrite(ap[i], dist[i]);
+    dist[i] = findDist(i); // in mm
+    analogWrite(ap[i], dist[i]); // 0 to 255 value
   }
-  Serial.println(dist[0]);
-  Serial.println(analogRead(A0));
-  Serial.println();
   
-  delay(1000);
+  delay(250);
 } 
