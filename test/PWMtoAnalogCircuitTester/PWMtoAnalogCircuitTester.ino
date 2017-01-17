@@ -30,5 +30,5 @@ void loop() {
   Serial.print(rd/4);
   Serial.println(" mm");
   Serial.println();
-  delay(400);
+  delay(300);
 }
