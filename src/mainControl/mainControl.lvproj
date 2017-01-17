@@ -511,31 +511,31 @@ AddOutputFilter chunkFilter
 				<Property Name="crio.SupportsDynamicRes" Type="Bool">true</Property>
 				<Property Name="crio.Type" Type="Str">NI 9205</Property>
 				<Property Name="cRIOModule.AI0.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI0.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI0.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI1.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI1.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI1.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI10.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI10.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI10.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI11.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI11.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI11.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI12.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI12.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI12.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI13.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI13.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI13.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI14.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI14.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI14.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI15.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI15.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI15.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI16.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI16.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI16.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI17.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI17.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI17.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI18.TerminalMode" Type="Str">0</Property>
 				<Property Name="cRIOModule.AI18.VoltageRange" Type="Str">0</Property>
 				<Property Name="cRIOModule.AI19.TerminalMode" Type="Str">0</Property>
 				<Property Name="cRIOModule.AI19.VoltageRange" Type="Str">0</Property>
 				<Property Name="cRIOModule.AI2.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI2.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI2.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI20.TerminalMode" Type="Str">0</Property>
 				<Property Name="cRIOModule.AI20.VoltageRange" Type="Str">0</Property>
 				<Property Name="cRIOModule.AI21.TerminalMode" Type="Str">0</Property>
@@ -557,23 +557,23 @@ AddOutputFilter chunkFilter
 				<Property Name="cRIOModule.AI29.TerminalMode" Type="Str">0</Property>
 				<Property Name="cRIOModule.AI29.VoltageRange" Type="Str">0</Property>
 				<Property Name="cRIOModule.AI3.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI3.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI3.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI30.TerminalMode" Type="Str">0</Property>
 				<Property Name="cRIOModule.AI30.VoltageRange" Type="Str">0</Property>
 				<Property Name="cRIOModule.AI31.TerminalMode" Type="Str">0</Property>
 				<Property Name="cRIOModule.AI31.VoltageRange" Type="Str">0</Property>
 				<Property Name="cRIOModule.AI4.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI4.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI4.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI5.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI5.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI5.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI6.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI6.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI6.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI7.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI7.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI7.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI8.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI8.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI8.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.AI9.TerminalMode" Type="Str">0</Property>
-				<Property Name="cRIOModule.AI9.VoltageRange" Type="Str">0</Property>
+				<Property Name="cRIOModule.AI9.VoltageRange" Type="Str">1</Property>
 				<Property Name="cRIOModule.DigitalIOMode" Type="Str">0</Property>
 				<Property Name="cRIOModule.EnableCalProperties" Type="Str">false</Property>
 				<Property Name="cRIOModule.EnableSpecialtyDigital" Type="Str">false</Property>

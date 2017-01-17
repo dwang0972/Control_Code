@@ -2,12 +2,15 @@
 // Removes FPGA customization and timing problems from cRIO
 //
 
-int tp[] = {2, 5, 7};
-int ep[] = {4, 6, 8};
+
+// Trigger, echo, and analog pins
+int tp[] = {2, 5, 7, 12};
+int ep[] = {4, 6, 8, 13};
+int ap[] = {3, 9, 10, 11};
+
+// Dist vector
 float dist[] = {0, 0, 0, 0};
 int numSens = sizeof(tp)/sizeof(int);
-
-int ap[] = {3, 9, 10, 11};
 
 // Returns distance in mm
 float findDist(int sens) {
@@ -31,10 +34,12 @@ void setup() {
 }
 
 void loop() {
+  // Poll the four corners and output data
   for (int i = 0; i < numSens; i++) {
     dist[i] = findDist(i); // in mm
     analogWrite(ap[i], dist[i]); // 0 to 255 value
   }
-  
-  delay(250);
+
+  // Pause
+  delay(100);
 } 

@@ -23,6 +23,9 @@ SFE_BMP180 BMP180_1;
 char st;
 double BD_1[2];
 
+// Analog Outs
+int ap[] = {9, 10, 11};
+
 void setup() {
   Serial.begin(9600);
   Wire.begin();
@@ -79,10 +82,18 @@ void loop() {
   }
 
   // Get MPU6050 Data
+  // Can also use getAcceleration(&ax, &ay, &az) and getRotation(&gx, &gy, &gz)
+  // Or ax = getAccelerationX(), gx = getRotationX(), etc. etc.
   MPU6050_1.getMotion6(MD_1, MD_1+t16, MD_1+(2*t16), MD_1+(3*t16), MD_1+(4*t16), MD_1+(5*t16));
   MPU6050_2.getMotion6(MD_2, MD_2+t16, MD_2+(2*t16), MD_2+(3*t16), MD_2+(4*t16), MD_2+(5*t16));
 
   // Output Data
-  delay(250);
+  analogWrite(ap[0], MD_1[0]);
+  analogWrite(ap[1], MD_2[0]);
+  analogWrite(ap[2], BD_1[0]);
+  analogWrite(ap[3], BD_1[1]);
+
+  // Pause
+  delay(100);
 }
 
