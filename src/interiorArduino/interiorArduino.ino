@@ -9,22 +9,20 @@
 
 // MPU6050's
 MPU6050 MPU6050_1(0x68);
-MPU6050 MPU6050_2(0x68);
 
 // MPU6050 Data
 int16_t MD_1[6];
-int16_t MD_2[6];
 int t16 = sizeof(int16_t);
 
 // BMP180 i2c addresses
 SFE_BMP180 BMP180_1;
 
 // BMP180 Data
-char st;
 double BD_1[2];
+char st;
 
 // Analog Outs
-int ap[] = {9, 10, 11};
+int ap[] = {9, 10, 11, 12};
 
 void setup() {
   Serial.begin(9600);
@@ -46,14 +44,6 @@ void setup() {
     MPU6050_1.initialize();
   }
   Serial.println("MPU6050_1 init success");
-  
-  MPU6050_2.initialize();
-  while (!MPU6050_2.testConnection()) {
-    Serial.println("MPU6050_2 init fail");
-    delay(500);
-    MPU6050_2.initialize();
-  }
-  Serial.println("MPU6050_2 init success");
 } 
 
 void loop() {
@@ -84,12 +74,13 @@ void loop() {
   // Get MPU6050 Data
   // Can also use getAcceleration(&ax, &ay, &az) and getRotation(&gx, &gy, &gz)
   // Or ax = getAccelerationX(), gx = getRotationX(), etc. etc.
-  MPU6050_1.getMotion6(MD_1, MD_1+t16, MD_1+(2*t16), MD_1+(3*t16), MD_1+(4*t16), MD_1+(5*t16));
-  MPU6050_2.getMotion6(MD_2, MD_2+t16, MD_2+(2*t16), MD_2+(3*t16), MD_2+(4*t16), MD_2+(5*t16));
+  //MPU6050_1.getMotion6(MD_1, MD_1+t16, MD_1+(2*t16), MD_1+(3*t16), MD_1+(4*t16), MD_1+(5*t16));
+  MD_1[0] = MPU6050_1.getAccelerationX();
+  MD_1[1] = MPU6050_1.getAccelerationY();
 
   // Output Data
   analogWrite(ap[0], MD_1[0]);
-  analogWrite(ap[1], MD_2[0]);
+  analogWrite(ap[1], MD_1[1]);
   analogWrite(ap[2], BD_1[0]);
   analogWrite(ap[3], BD_1[1]);
 
