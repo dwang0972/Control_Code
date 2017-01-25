@@ -21,7 +21,7 @@ float findDist(int sens) {
   delayMicroseconds(10);
   digitalWrite(tp[sens], LOW);
   duration = pulseIn(ep[sens], HIGH);
-  distance = (duration / 2) * 0.344;
+  distance = (duration / 2) * 0.344; // this is mm
   return distance;
 }
 
@@ -41,5 +41,5 @@ void loop() {
   }
 
   // Pause
-  delay(100);
+  delay(10);
 } 
