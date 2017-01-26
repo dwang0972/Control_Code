@@ -36,9 +36,9 @@ def main():
         length = len(message)
         if length == 34:
             results = parse_message(message)
-            print results
+            print(results)
         else:
-            print "Incorrect message length: {}".format(length)
+            print("Incorrect message length: {}".format(length))
 
 if __name__ == "__main__":
     main()
