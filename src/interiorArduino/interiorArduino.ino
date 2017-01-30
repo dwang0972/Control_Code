@@ -16,7 +16,6 @@ int t16 = sizeof(int16_t);
 
 // BMP180 i2c addresses
 SFE_BMP180 BMP180_1;
-
 // BMP180 Data
 double BD_1[2];
 char st;
